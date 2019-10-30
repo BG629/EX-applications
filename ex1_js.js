@@ -80,12 +80,31 @@ $(document).ready(function(){
     ]
 
 
+    $('#submitbtn').click(function(){
+        
+        if (GenderSelectbtn == -1 ) {
+          alert("Click On Male / Female Icon");
+          return
+        }
+        if ( $('#maxAge').val() == '' || $('#minAge').val() == '' ) {
+            alert('Enter Min/Max age values')
+            return
+        }
+  
+      
+    }); 
+
   });
+  var GenderSelectbtn = -1 // 0 == male || 1 == female
 
   function GenderSelect(genderImg){
     if(genderImg.src.includes('female')){ //.attr('src')
-        // make object as female
-    }   
-    // make object male
+        GenderSelectbtn = 1 
+        alert('Woman')
+        return
+    }
+    GenderSelectbtn = 0
+    alert('Man')
   }
 
+  
