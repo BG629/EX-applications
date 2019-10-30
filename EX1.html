@@ -12,27 +12,85 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="ex1_js.js"></script>
 
- 
+ <style>
+     body {
+     height: 100%;
+     margin:auto;
+    }
+ .gender{
+     padding-top: 4%;
+ }
+ .ageFields{
+    padding-top: 10%;
+ }
+ .ageFields .row:nth-of-type(2){
+    padding-bottom: 4%;
+ }
+ .ageFields input{
+     width: 100%;
+ }
+.ageFields input{
+    text-align:center;
+}
+
+ </style>
 
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class='col-lg-10'>
-                    <nav class="navbar navbar-light bg-light">
+        <div class="row my-auto">
+            <div class="col-1"></div>
+            <div class='col-lg-10 '>
+                    <nav class="navbar navbar-dark bg-dark">
                         <span class="navbar-brand mb-0 h1">Get Started</span>
                     </nav>
             </div>
+            <div class="col-1"></div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-5">
-                <img class="img-fluid img-thumbnail float-left" src="female-symbol.png" alt="" onclick="GenderSelect(this)">
+    <div class="container gender">
+        <div class="row my-auto">
+            <div class="col-1"></div>
+            <div class="col-5" id="woman">
+                <img  class="img-responsive img-thumbnail" src="female-symbol.png" alt="" onclick="GenderSelect(this)">
             </div>
             <div class="col-5">
-                <img class="img-fluid img-thumbnail float-left" src="male-gender.jpg" alt="" onclick="GenderSelect(this)">
+                <img id="man"class="img-responsive img-thumbnail" src="male-gender.jpg" alt="" onclick="GenderSelect(this)">
             </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+    <div class="container ageFields">
+        <div class="row my-auto">
+            <div class="col"></div>
+            <div class="col-8">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Min Age</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="minAge">
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row my-auto">
+            <div class="col"></div>
+            <div class="col-8">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Max Age</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="maxAge">
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row my-auto">
+            <div class="col"></div>
+            <div class="col-8">
+                <button type="button" class="btn btn-dark btn-block" id="submitbtn">Submit</button>
+            </div>
+            <div class="col"></div>
         </div>
     </div>
 </body>
