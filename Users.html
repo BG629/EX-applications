@@ -12,17 +12,56 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="ex1_js.js"></script>
 
+    <style>
+    button{
+        width: 80%;
+        display:inline-block; float:none;
+    }
+    .row{
+        padding-top: 5%;
+    }
+    #NamePH{
+        width: 100%;
+        white-space: nowrap;
+    }
+    h2{
+        width: 3rem;
+    }
+   
+
+    </style>
+
 </head>
 <body onload="UsersLoad()">
     <div class="container">
+        <!-- <div class="row head my-auto">
+            <div class="col"></div>
+            <div class="col-8 jumbotron text-center " id="NamePH"><h2>asfafasfasf asfasfsa</h2></div>
+            <div class="col"></div>
+        </div> -->
+        <div class="row my-auto">
+                <div class="col-1"></div>
+                <div class='col-lg-10 '>
+                        <nav class="navbar navbar-dark bg-dark">
+                            <span id="NamePH" class="navbar-brand mb-0 h1"></span>
+                        </nav>
+                </div>
+                <div class="col-1"></div>
+            </div>
         <div class="row">
-            <div class="col"></div>
-            <div class="col-8 jumbotron" id="NamePH"></div>
-            <div class="col"></div>
+            <div class="col-1"></div>
+            <div class="col-10 text-center" id="imgPH"></div>
+            <div class="col-1"></div>
         </div>
         <div class="row">
             <div class="col"></div>
-            <div class="col-10" id="imgPH"></div>
+            <div class="col-4" >
+                <button id="like" class="btn btn-dark">Like</button><!-- <img src="favorite-heart-button.png" alt="" class="img-responsive img-thumbnail">-->
+                
+            </div>
+            <div class="col-4">
+                <button id="next" class="btn btn-dark">Next</button> <!-- <img src="right-arrow.png" alt="" class="img-responsive img-thumbnail">-->
+            </div>
             <div class="col"></div>
         </div>
         <div class="row">
