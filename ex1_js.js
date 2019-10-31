@@ -3,13 +3,13 @@ $(document).ready(function(){
 
         constructor(id, name, gender, age, height, city, image, premium){
             this.id = id;
-            this.name;
-            this.gender;
-            this.age;
-            this.height;
-            this.city;
-            this.image;
-            this.premium;
+            this.name = name;
+            this.gender = gender;
+            this.age= age;
+            this.height = height;
+            this.city = city;
+            this.image = image;
+            this.premium = premium;
         }
     
         Render(){
@@ -23,7 +23,7 @@ $(document).ready(function(){
     class premium extends profile{
         
         constructor(id, name, gender, age, height, city, image, premium, hobbies){
-            super(id, name, gender, age, height, city, image, premium)
+            super(id, name, gender, age, height, city, image, premium);
             this.hobbies = hobbies;
         }
     
@@ -44,20 +44,33 @@ $(document).ready(function(){
     
             for (let i = 0; i < userArr.length; i++) {
     
-                if(this.userArr[i].premium == true){ // Premium user
-                    this.userArr[i] = new premium(this.userArr[i].id,this.userArr[i].name,this.userArr[i].gender,this.userArr[i].age,
-                    this.userArr[i].height,this.userArr[i].city,this.userArr[i].image,this.userArr[i].premium,this.userArr[i].hobbies)
+                if(userArr[i].premium == true){ // Premium user
+                    userArr[i] = new premium(userArr[i].id,userArr[i].name,userArr[i].gender,userArr[i].age,
+                    userArr[i].height,userArr[i].city,userArr[i].image,userArr[i].premium,userArr[i].hobbies)
                     continue;
                 }
                 // Not Premium
-                this.userArr[i] = new profile(this.userArr[i].id,this.userArr[i].name,this.userArr[i].gender,this.userArr[i].age,
-                this.userArr[i].height,this.userArr[i].city,this.userArr[i].image,this.userArr[i].premium)
+                userArr[i] = new profile(userArr[i].id,userArr[i].name,userArr[i].gender,userArr[i].age,
+                userArr[i].height,userArr[i].city,userArr[i].image,userArr[i].premium);
             }
+
+            // userArr.forEach(element => {
+            //     if (element.premium == true) {
+            //         element = new premium(element.id,element.name,element.gender,element.age,
+            //              element.height,element.city,element.image,element.premium,element.hobbies);
+            //              continue;
+            //     }
+            //     element = new profile(element.id,element.name,element.gender,element.age,
+            //         element.height,element.city,element.image,element.premium);
+            // });
             
         }
 
-        Filter(conditions){
-            
+        Filter(){
+            var mapped_UsersArr = users.filter( function (x){
+                return (x.age <= $('#maxAge').val() && x.age >= $('#minAge').val() && x.gender == GenderSelectbtn);
+            });
+            return mapped_UsersArr;
         }
 
         Next(){
@@ -95,10 +108,15 @@ $(document).ready(function(){
             return;
         }
 
+        mainapp1 = new MainApp(users);
+        mapped_arr = mainapp1.Filter();
+        console.log(mainapp1)
+        console.log(mapped_arr)
+        // Switch To new window
+        // window.open('Users.html','_self');
 
         
-        // Switch To new window
-        window.open('Users.html','_self');
+
 
         
         // mapped_UsersArr = users.filter( function (x){
