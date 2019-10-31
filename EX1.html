@@ -1,156 +1,97 @@
-$(document).ready(function(){
-    class profile{
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tinder App</title>
 
-        constructor(id, name, gender, age, height, city, image, premium){
-            this.id = id;
-            this.name;
-            this.gender;
-            this.age;
-            this.height;
-            this.city;
-            this.image;
-            this.premium;
-        }
-    
-        Render(){
-    
-            return '<p>ID: '+ this.id +'</p><br> <p>Name: '+this.name+'</p><br> <p>Gender: '+this.gender+'</p><br> <p>Age: '+this.age+'</p><br>'+
-             '<p>Height: '+this.height+'</p><br> <p>City: '+this.city+'</p><br> <p>Image: '+this.image+'</p><br> <p>Premium: '+this.premium+'</p><br>'
-    
-        }
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="ex1_js.js"></script>
+
+ <style>
+    body {
+        height: 100%;
+        margin:auto;
     }
-    
-    class premium extends profile{
-        
-        constructor(id, name, gender, age, height, city, image, premium, hobbies){
-            super(id, name, gender, age, height, city, image, premium)
-            this.hobbies = hobbies;
-        }
-    
-        Render(hobbiesArr){ // CHECK THIS ONE ?????
-    
-            st = 'Hobbies: '
-            for (let i = 0; i < hobbiesArr.length; i++) {
-                st +=  hobbiesArr[i]+' ';
-            }
-    
-            return this.Render() + st
-        }
+    .gender{
+        padding-top: 4%;
     }
-    
-    class MainApp{
-    
-        constructor(userArr){
-    
-            for (let i = 0; i < userArr.length; i++) {
-    
-                if(this.userArr[i].premium == true){ // Premium user
-                    this.userArr[i] = new premium(this.userArr[i].id,this.userArr[i].name,this.userArr[i].gender,this.userArr[i].age,
-                    this.userArr[i].height,this.userArr[i].city,this.userArr[i].image,this.userArr[i].premium,this.userArr[i].hobbies)
-                    continue;
-                }
-                // Not Premium
-                this.userArr[i] = new profile(this.userArr[i].id,this.userArr[i].name,this.userArr[i].gender,this.userArr[i].age,
-                this.userArr[i].height,this.userArr[i].city,this.userArr[i].image,this.userArr[i].premium)
-            }
-            
-        }
-
-        Filter(conditions){
-            
-        }
-
-        Next(){
-
-        }
-
-        Render(){
-
-        }
-    
-    } 
-
-
-    $('#submitbtn').click(function(){
-        
-        if (GenderSelectbtn == '' ) {
-          alert("Click On Male / Female Icon");
-          return
-        }
-        if ( $('#maxAge').val() == '' || $('#minAge').val() == '' ) {
-            alert('Enter Min/Max age values')
-            return
-        }
-        if($('#minAge').val() < 18){ alert('Are U A Pedophile??\n'); return;}
-
-        let noMatch_Counter = 0
-        for (let i = 0; i < users.length; i++) {
-            if (users[i].age <= $('#maxAge').val() && users[i].age >= $('#minAge').val()) { 
-                noMatch_Counter = 1
-                break;
-            }
-        }
-        if(noMatch_Counter == 0){
-            alert('There Is No Match')
-            return;
-        }
-
-
-        
-        // Switch To new window
-        window.open('Users.html','_self');
-
-        
-        // mapped_UsersArr = users.filter( function (x){
-        //     console.log(x.age + x.gender)
-        //     return (x.age <= $('#maxAge').val() && x.age >= $('#minAge').val() && x.gender == GenderSelectbtn);
-        // });
-    
-        // console.log(mapped_UsersArr)
-        // console.log(mapped_UsersArr[0].name)
-    }); 
-});
-
-
-    var GenderSelectbtn = ''; // 0 == male || 1 == female
-    var users = [
-        {id : 0, name : "Beyonce knowles", gender: "female", age: 37, height: 167, location: "Los Angeles",
-        hobbies: ["Sing", "Dance"],
-        image:"https://content.iospress.com/media/hsm/2016/35-3/hsm-35-3-hsm0870/hsm-35-hsm0870-g010.jpg",
-        premium : true
-        },
-        {id : 01, name : "Beyonce knowles22", gender: "female", age: 45, height: 167, location: "Los Angeles",
-        hobbies: ["Sing", "Dance"],
-        image:"https://content.iospress.com/media/hsm/2016/35-3/hsm-35-3-hsm0870/hsm-35-hsm0870-g010.jpg",
-        premium : false
-        },
-        {id : 01, name : "JayZ", gender: "male", age: 45, height: 167, location: "Los Angeles",
-        hobbies: ["Sing", "Dance"],
-        image:"https://content.iospress.com/media/hsm/2016/35-3/hsm-35-3-hsm0870/hsm-35-hsm0870-g010.jpg",
-        premium : false
-        }
-    ]
-
-    function GenderSelect(genderImg){
-        if(genderImg.src.includes('female')){ 
-            GenderSelectbtn = 'female';
-            return;
-        }
-        GenderSelectbtn = 'male';
+    .ageFields{
+        padding-top: 10%;
     }
-
-
-
-
-
-    
-    function UsersLoad(){
-
-        
-        console.log('new newn newn enew')
-        
-  
+    .ageFields .row:nth-of-type(2){
+        padding-bottom: 4%;
     }
-    
-    
-    
+    .ageFields input{
+        width: 100%;
+    }
+    .ageFields input{
+        text-align:center;
+    }
+ </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row my-auto">
+            <div class="col-1"></div>
+            <div class='col-lg-10 '>
+                    <nav class="navbar navbar-dark bg-dark">
+                        <span class="navbar-brand mb-0 h1">Get Started</span>
+                    </nav>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+    <div class="container gender">
+        <div class="row my-auto">
+            <div class="col-1"></div>
+            <div class="col-5" id="woman">
+                <button><img  class="img-responsive img-thumbnail" src="female-symbol.png" alt="" onclick="GenderSelect(this)"></button>
+            </div>
+            <div class="col-5">
+                <button><img id="man"class="img-responsive img-thumbnail" src="male-gender.jpg" alt="" onclick="GenderSelect(this)"></button>
+                
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+    <div class="container ageFields">
+        <div class="row my-auto">
+            <div class="col"></div>
+            <div class="col-8">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Min Age</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="minAge">
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row my-auto">
+            <div class="col"></div>
+            <div class="col-8">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Max Age</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="maxAge">
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row my-auto">
+            <div class="col"></div>
+            <div class="col-8">
+                <button type="button" class="btn btn-dark btn-block" id="submitbtn">Submit</button>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div> 
+</body>
+</html>
