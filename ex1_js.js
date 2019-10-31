@@ -5,7 +5,7 @@ $(document).ready(function(){
             this.id = id;
             this.name = name;
             this.gender = gender;
-            this.age= age;
+            this.age = age;
             this.height = height;
             this.city = city;
             this.image = image;
@@ -34,7 +34,7 @@ $(document).ready(function(){
                 st +=  hobbiesArr[i]+' ';
             }
     
-            return this.Render() + st
+            return this.Render() + st;
         }
     }
     
@@ -107,25 +107,18 @@ $(document).ready(function(){
             alert('There Is No Match')
             return;
         }
-
         mainapp1 = new MainApp(users);
         mapped_arr = mainapp1.Filter();
         console.log(mainapp1)
         console.log(mapped_arr)
+
+        localStorage.setItem("mapped_arr", JSON.stringify(mapped_arr));
+
         // Switch To new window
-        // window.open('Users.html','_self');
+        window.open('Users.html','_self');
 
         
-
-
         
-        // mapped_UsersArr = users.filter( function (x){
-        //     console.log(x.age + x.gender)
-        //     return (x.age <= $('#maxAge').val() && x.age >= $('#minAge').val() && x.gender == GenderSelectbtn);
-        // });
-    
-        // console.log(mapped_UsersArr)
-        // console.log(mapped_UsersArr[0].name)
     }); 
 });
 
@@ -139,7 +132,7 @@ $(document).ready(function(){
         },
         {id : 01, name : "Beyonce knowles22", gender: "female", age: 45, height: 167, location: "Los Angeles",
         hobbies: ["Sing", "Dance"],
-        image:"https://content.iospress.com/media/hsm/2016/35-3/hsm-35-3-hsm0870/hsm-35-hsm0870-g010.jpg",
+        image:"https://cpb-us-w2.wpmucdn.com/blogs.umb.edu/dist/4/3649/files/2018/02/margot-robbie-1r381kt.jpg",
         premium : false
         },
         {id : 01, name : "JayZ", gender: "male", age: 45, height: 167, location: "Los Angeles",
@@ -164,9 +157,30 @@ $(document).ready(function(){
     
     function UsersLoad(){
 
-        
-        console.log('new newn newn enew')
-        
+        var mapped_arr = JSON.parse(localStorage.getItem("mapped_arr"));
+
+        $(document).ready(function(){
+
+            let i=0;
+
+            $('#NamePH').html('<h2 class="text-nowrap">'+mapped_arr[0].name+'</h2>');
+
+            $('#imgPH').html('<img src="'+mapped_arr[0].image+'" alt="" class="img-responsive img-thumbnail rounded mx-auto d-block">');
+
+            $('#detailsPH').html();
+
+            $('#next').click(function(){
+                
+                i++;
+                if (i >= mapped_arr.length) {
+                    alert('end of array')
+                    return;
+                }
+                
+                $('#NamePH').html('<h2 class="text-nowrap">'+mapped_arr[i].name+'</h2>');
+                $('#imgPH').html('<img src="'+mapped_arr[i].image+'" alt="" class="img-responsive img-thumbnail rounded mx-auto d-block">');
+            });
+        });
   
     }
     
