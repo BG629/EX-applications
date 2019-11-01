@@ -14,11 +14,16 @@
 
     <style>
     button{
-        width: 80%;
-        display:inline-block; float:none;
+        width: 100%;
+        display:inline-block; 
+        float:none;
+        text-align: center;
     }
     .row{
         padding-top: 5%;
+    }
+    .head{
+        padding-top: 0;
     }
     #NamePH{
         width: 100%;
@@ -27,27 +32,30 @@
     h2{
         width: 3rem;
     }
+    #imgPH{
+        /* max-height: 25em; */
+        overflow: hidden;
+        height:auto;
+    }
+    img{
+        max-height: 25em;
+    }
+    
    
-
     </style>
 
 </head>
 <body onload="UsersLoad()">
     <div class="container">
-        <!-- <div class="row head my-auto">
-            <div class="col"></div>
-            <div class="col-8 jumbotron text-center " id="NamePH"><h2>asfafasfasf asfasfsa</h2></div>
-            <div class="col"></div>
-        </div> -->
-        <div class="row my-auto">
-                <div class="col-1"></div>
-                <div class='col-lg-10 '>
-                        <nav class="navbar navbar-dark bg-dark">
-                            <span id="NamePH" class="navbar-brand mb-0 h1"></span>
-                        </nav>
-                </div>
-                <div class="col-1"></div>
+        <div class="row my-auto head">
+            <div class="col-1"></div>
+            <div class='col-lg-10 '>
+                <nav class="navbar navbar-dark bg-dark">
+                    <span id="NamePH" class="navbar-brand mb-0 h1"></span>
+                </nav>
             </div>
+            <div class="col-1"></div>
+        </div>
         <div class="row">
             <div class="col-1"></div>
             <div class="col-10 text-center" id="imgPH"></div>
@@ -56,8 +64,7 @@
         <div class="row">
             <div class="col"></div>
             <div class="col-4" >
-                <button id="like" class="btn btn-dark">Like</button><!-- <img src="favorite-heart-button.png" alt="" class="img-responsive img-thumbnail">-->
-                
+                <button id="like" class="btn btn-dark">Like</button><!-- <img src="favorite-heart-button.png" alt="" class="img-responsive img-thumbnail">-->   
             </div>
             <div class="col-4">
                 <button id="next" class="btn btn-dark">Next</button> <!-- <img src="right-arrow.png" alt="" class="img-responsive img-thumbnail">-->
@@ -72,3 +79,5 @@
     </div>
 </body>
 </html>
+
+
