@@ -22,8 +22,7 @@ function UsersLoad(){
                 window.open('index.html','_parent');
                 return;
             }
-
-            app.Next(i)
+            app.Next(i);
         });
     });
 }
