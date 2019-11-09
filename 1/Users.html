@@ -35,15 +35,18 @@
         width: 3rem;
     }
     #imgPH{
-        /* max-height: 25em; */
         overflow: hidden;
         height:auto;
     }
     img{
-        max-height: 25em;
+        max-height: 15em;
     }
-    
-   
+    #detailsPH p{
+        text-align: center;
+        margin: 0% 0% 1%;
+        padding: 0;
+        font-weight:bold;
+    }
     </style>
 
 </head>
@@ -58,25 +61,29 @@
             </div>
             <div class="col-1"></div>
         </div>
-        <div class="row">
+        <div class="row h-30">
             <div class="col-1"></div>
             <div class="col-10 text-center" id="imgPH"></div>
             <div class="col-1"></div>
         </div>
-        <div class="row">
-            <div class="col"></div>
-            <div class="col-4" >
-                <button id="like" class="btn btn-dark">Like</button><!-- <img src="favorite-heart-button.png" alt="" class="img-responsive img-thumbnail">-->   
+        <div class="container">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col-4" >
+                    <button id="like" class="btn btn-dark">Like</button><!-- <img src="favorite-heart-button.png" alt="" class="img-responsive img-thumbnail">-->   
+                </div>
+                <div class="col-4">
+                    <button id="next" class="btn btn-dark">Next</button> <!-- <img src="right-arrow.png" alt="" class="img-responsive img-thumbnail">-->
+                </div>
+                <div class="col"></div>
             </div>
-            <div class="col-4">
-                <button id="next" class="btn btn-dark">Next</button> <!-- <img src="right-arrow.png" alt="" class="img-responsive img-thumbnail">-->
-            </div>
-            <div class="col"></div>
         </div>
-        <div class="row">
-            <div class="col"></div>
-            <div class="col-10" id="detailsPH"></div>
-            <div class="col"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col "></div>
+                <div class="col-10" id="detailsPH"></div>
+                <div class="col"></div>
+            </div>
         </div>
     </div>
 </body>
