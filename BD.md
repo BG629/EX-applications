@@ -107,12 +107,32 @@ df_b -> Standartization
 ```json
 High Variance
 Low Bias
+
+Overfitting occurs when number of features is on the same order of magnitude of number of samples
+Too many features to learn, but 
+Too few examples to learn from
+
 ```
 
 ## UnderFitting:
 ```json
 Low Variance
 High Bias
+```
+
+## Decision Trees – Pros & Cons (DT):
+```
+Pros
+Very illustrative & interpretable
+One can easily understand the mechanics of the solution
+Ranks saliency of features
+Can be implemented with rules
+Can be used for regression
+Complex Decision Boundary
+Cons
+Overfitting
+However, two extension of it is are two of the best classification algorithms nowadays, a.k.a. Random Forest & Boosted Trees
+
 ```
 
 ***************************************************
@@ -122,5 +142,55 @@ https://drive.google.com/drive/u/0/folders/1QF5EsAOSKQNr1oumy93HCKspBTey5wAl
 
 connect with mindad
 
-1. map redice
-2. scaling techniques
+1. map reduce
+2. scaling techniques:
+```
+Standartization
+Normalization
+Min / Max
+Quartile Standartization
+```
+3. feature space
+4. Regression
+5. Regression GD
+6. Logistic Regression
+7. L6-Classification-FeaturesSelection-DecisionTrees - Entropy
+8. L8-Classification-OverFitting-Ensemble
+9. L9-Evaluation:
+```
+K-fold cross validation = dividing dataset adn using test+train data to validate the model
+
+confusion matrix (TP,TN...)
+
+ROC Curve
+```
+10. Clustering
+```
+K-Means clustering
+
+Pros
+Extremely simple algorithm
+Relatively efficient – complexity O(n)
+Has an objective function to optimize. 
+However, often it terminates at a local optimum. The global optimum may be found using techniques such as simulated annealing and genetic algorithms
+Cons
+Need to specify k, the number of clusters, in advance
+Trouble with noisy data and outliers
+Not suitable to discover clusters with non-convex data
+Can’t visualize for dimensions > 2
+
+
+Hierarchical clustering
+
+Pros
+Do not have to assume any particular number of clusters 
+Just cut the tree
+Hierarchy is important for some apps
+In contrast to K-Means, can be nicely visualized, independent of  dimensionality
+Cons
+Complexity: 
+Space - O(N2) – distance matrix
+Time – O(N3) – Merge all points – each time update dist. Matrix
+Difficulty in handling different size of clusters
+
+```
