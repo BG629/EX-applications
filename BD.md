@@ -3,35 +3,35 @@
 ## Practice 1:
 ## Practice 2:
 ## Practice 3:
-
+```
 crosstab
 describe
 quantile
 IQR
 groupby
-
+```
 ## Practice 4 - charts:
-
+```
 histogram
 boxplot
 Scatterplot
 Matrix plot
-
+```
 ## Practice 5 - linear regression:
-
+```
 simple liner regression
 multy-var liner regression
 MSE
 RMSE
 R^2
-
+```
 ## Practice 6 - linear regression:
-
+```
 Train Test Split
 Polynomial regression
-
+```
 ## Practice 7 - Logistic Regression:
-
+```
 pd.get_dummies()
 pd.concat(initial Dataset, new_dummy var, new_dummy var, axis=1)
 
@@ -40,7 +40,7 @@ Confusion Matrix (https://towardsdatascience.com/understanding-confusion-matrix-
 classification_report (recall/f1/presicion) 
 
 ROC
-
+```
 
 ## Practice 8:
 ## Practice 9:
@@ -52,36 +52,36 @@ ROC
 ******************************************************************
 
 ## earthquakes (var) goes up:
-
+```
 Recall +
 presicion -
-
+```
 ## earthquakes (var) goes down:
-
+```
 Recall -
 presicion +
-
+```
 
 ## Information Gain (IG):
 
-```json
+```
 the addition of inforamtion of a feature on the target variable
 ```
 
 ## Random Forest:
-
+```
 leads to better model performance because it decreases the model’s variance, without increasing the bias
-
+```
 
 ## Accuracy:
-
+```
 value of correct answers base on the whole model (correct and incorrect)
-
+```
 ## Recall:
-
+```
 how much did i perdict out of all earthquakes that happend
 (60 times out of 100 earthquakes)
-
+```
 
 ## 𝜃0 == bias
 
