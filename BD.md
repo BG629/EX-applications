@@ -64,6 +64,10 @@ presicion +
 
 # Information Gain (IG):
 
+```json
+asdasdas
+```
+
 the addition of inforamtion of a feature on the target variable
 
 
