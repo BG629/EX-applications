@@ -87,7 +87,7 @@ how much did i perdict out of all earthquakes that happend
 
 
 ## Scaling Methods: (best to worst)
-
+```
 1. quartile standartization - requeiers sort of the data to find median (effective only with lots of data)
 2. Standartization
 3. Normalization
@@ -101,7 +101,7 @@ df_b: 100,000 samples, 100 features
 
 df_a -> quartile standartization
 df_b -> Standartization
-
+```
 
 ## OverFitting:
 ```json
