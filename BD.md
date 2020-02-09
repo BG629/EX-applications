@@ -105,6 +105,19 @@ df_b: 100,000 samples, 100 features
 df_a -> quartile standartization
 df_b -> Standartization
 
+
+# OverFitting:
+```json
+High Variance
+Low Bias
+```
+
+# UnderFitting:
+```json
+Low Variance
+High Bias
+```
+
 ***************************************************
 ## lecterures:
 
