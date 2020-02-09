@@ -1,4 +1,4 @@
-##Info for Practices:
+## Info for Practices:
 
 # Practice 1:
 # Practice 2:
@@ -51,12 +51,12 @@ ROC
 
 ******************************************************************
 
-#earthquakes (var) goes up:
+# earthquakes (var) goes up:
 
 Recall +
 presicion -
 
-#earthquakes (var) goes down:
+# earthquakes (var) goes down:
 
 Recall -
 presicion +
