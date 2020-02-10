@@ -196,6 +196,10 @@ Difficulty in handling different size of clusters
 
 ```
 
+***************************************************
+# Tests:
+
+## 2016:
 ```
 1. ROC שאלת בסיס
 2. map - reduce גורם ראשוני
@@ -211,3 +215,47 @@ Quarttile Standartization
 
 
 ````
+
+## 2017:
+```
+1. outliers
+למה לחריגים יש אפקט מוגבר ברגרסיה
+
+2. ציור של קליסיפייר והתאמה של 
+TP, NP ...
+
+בניית מודל OUTBRAIN
+
+3. test + train graph and their differnces
+
+```
+
+## 2018:
+```
+1. Overfitting עפ"י תוצאות של מבחני הסמפלים
+
+2. תחזיות רעידת אדמה
+
+3. IG - Entropy
+
+4. השלמת נתונים שכר
+טיוב 
+Hierarchjical Clustering
+Dendogram
+
+```
+
+## 2019
+```
+1. תרשים זרימה
+
+2. Logistic Regression
+חישוב תוצאת מסווג (0\1)
+
+3. סביבון
+
+4. שני DF
+
+5. ML - גרף להשלים
+
+```
