@@ -154,7 +154,8 @@ Quartile Standartization
 4. Regression
 5. Regression GD
 6. Logistic Regression
-7. L6-Classification-FeaturesSelection-DecisionTrees - Entropy
+7. L6-Classification-FeaturesSelection-DecisionTrees
+```Entropy```
 8. L8-Classification-OverFitting-Ensemble
 9. L9-Evaluation:
 ```
@@ -194,3 +195,19 @@ Time – O(N3) – Merge all points – each time update dist. Matrix
 Difficulty in handling different size of clusters
 
 ```
+
+```
+1. ROC שאלת בסיס
+2. map - reduce גורם ראשוני
+3. ראש-צורה 
+יתרון\חסרון בהוספת פיצ'רים 
+IG תרגיל בסיסי
+4. DT, RF
+חסרון של DT ואיך RF פותר
+5. תרגיל חישוב של
+Normaliztion
+Standartization
+Quarttile Standartization
+
+
+````
