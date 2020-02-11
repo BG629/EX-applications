@@ -54,8 +54,12 @@ print(classification_report(y_test,y_pred))
 
 ```
 
-## Practice 9:
-## Practice 10:
+## Practice 9: DT & RF
+```
+full DT and RF and a bit of ROC
+```
+
+## Practice 10: clustering
 
 
 
