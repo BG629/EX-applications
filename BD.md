@@ -259,3 +259,6 @@ Dendogram
 5. ML - גרף להשלים
 
 ```
+
+
+![](choo.jpeg)
