@@ -260,5 +260,10 @@ Dendogram
 
 ```
 
+<img src="choo.jpeg" width="100" height="50">
 
+
+```
 ![](choo.jpeg)
+
+```
