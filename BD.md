@@ -260,10 +260,10 @@ Dendogram
 
 ```
 
-<img src="choo.jpeg" width="100" height="50">
+<img src="choo.jpeg" width="60%" height="400">
 
 
 ```
 ![](choo.jpeg)
-
+width="100"
 ```
